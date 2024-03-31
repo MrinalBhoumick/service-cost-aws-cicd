@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cost Explorer - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <h2>Response from AWS Cost Explorer API:</h2>
+        <pre>{{ result.response }}</pre>
+        
+        <h2>Services and their respective amounts:</h2>
+        <ul>
+            {% for service, amount in result.services.items() %}
+                <li>Service: {{ service }}, Amount: {{ amount }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

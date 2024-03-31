@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cost Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AWS Cost Explorer</h1>
+        <form method="post">
+            <label for="account_id">AWS Account ID:</label><br>
+            <input type="text" id="account_id" name="account_id" required><br><br>
+            
+            <label for="region">AWS Region:</label><br>
+            <input type="text" id="region" name="region" required><br><br>
+            
+            <label for="start">Start Date (YYYY-MM-DD):</label><br>
+            <input type="text" id="start" name="start"><br><br>
+            
+            <label for="end">End Date (YYYY-MM-DD):</label><br>
+            <input type="text" id="end" name="end"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
